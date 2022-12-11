@@ -5,7 +5,7 @@ import { theme } from "../theme";
 
 const RepositoryItemHeader = ({
   name,
-  owner,
+  ownerAvatarUrl,
   fullName,
   description,
   language,
@@ -17,7 +17,7 @@ const RepositoryItemHeader = ({
       }}
     >
       <View style={{ flexGrow: 0 }}>
-        <Image style={styles.image} source={{ uri: owner.avatar }}></Image>
+        <Image style={styles.image} source={{ uri: ownerAvatarUrl }}></Image>
       </View>
       <View style={{ paddingLeft: 8, flexGrow: 1 }}>
         <StyledText fontWeight="bold" fontSize="subheading">
@@ -59,6 +59,16 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     color: theme.colors.white,
     backgroundColor: theme.colors.primary,
+    /* backgroundColor:{
+Importamos Platform de react native
+
+backgroundColor: Platform.OS==="android" ? 'red' : 'blue'
+backgroundColor: Platform.select({
+android:'blue',
+ios:"red",
+default:'cyan'
+})
+     }*/
     alignSelf: "flex-start",
     borderRadius: 10,
     overflow: "hidden",

@@ -1,3 +1,5 @@
+import { Platform } from "react-native";
+
 export const theme = {
   appBar: {
     primary: "#24292e",
@@ -15,7 +17,11 @@ export const theme = {
     subHeading: 16,
   },
   fonts: {
-    main: "System",
+    main: Platform.select({
+      android: "Roboto",
+      ios: "Arial",
+      default: "System",
+    }),
   },
   fontWeights: {
     normal: "400",

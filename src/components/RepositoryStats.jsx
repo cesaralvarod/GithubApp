@@ -32,7 +32,7 @@ const RepositoryStats = (props) => {
       </View>
       <View>
         <StyledText align="center" fontWeight="bold">
-          {parseThousands(props.watchersCount)}
+          {parseThousands(props.reviewCount)}
         </StyledText>
         <StyledText align="center" color="secondary">
           Watchers

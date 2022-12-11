@@ -22,9 +22,11 @@ const AppBar = () => {
 
   return (
     <View style={styles.container}>
-      <StyledText style={styles.text}>Repositories</StyledText>
-      <TouchableHighlight onPress={() => navigate("SignIn")}>
-        <StyledText style={styles.text}>Sign In</StyledText>
+      <TouchableHighlight onPress={() => navigate("Home")}>
+        <StyledText style={styles.text}>Repositories</StyledText>
+      </TouchableHighlight>
+      <TouchableHighlight onPress={() => navigate("Login")}>
+        <StyledText style={styles.text}>LogIn</StyledText>
       </TouchableHighlight>
     </View>
   );
